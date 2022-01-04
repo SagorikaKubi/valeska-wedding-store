@@ -158,9 +158,10 @@ nav > ul > li:hover .dropdown {
   display: flex;
   padding: 20px;
   height: 100vh;
+  margin: 100px 0;
 }
 
-.manu-bar {
+.menu-bar {
   width: 25%;
   /* border: 2px solid red; */
   /* background-color: rgb(240, 178, 240); */
@@ -216,6 +217,8 @@ nav > ul > li:hover .dropdown {
   height: 300px;
   text-align: center;
   line-height: 35px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(243, 242, 242);
 }
 
 .gown-pic-info img {
