@@ -48,7 +48,6 @@ nav > a {
   letter-spacing: 3px;
   font-size: 35px;
   color: #fff;
-  /* color: cyan; */
 }
 
 nav ul li a {
@@ -84,6 +83,7 @@ nav > ul > li:hover .dropdown {
   float: right;
 }
 
+/* ******* media query of navbar ******** */
 @media (max-width: 1010px) {
   nav {
     background-color: #3169a0;
@@ -137,35 +137,17 @@ nav > ul > li:hover .dropdown {
   padding: 20px;
 }
 
-/* ******* media query ******** */
-@media (max-width: 668px) {
-  header {
-    height: 500px;
-  }
-
-  #header-description h1 {
-    font-size: 28px;
-    color: rgb(7, 201, 201);
-    line-height: 40px;
-    text-align: center;
-  }
-}
-
-/* ////////////////////////////////// */
-
+/************* CATEGORIES DETAILS  **************/
 .categories {
-  /* border: 2px solid purple; */
   display: flex;
   padding: 20px;
-  height: 100vh;
   margin: 70px 0;
 }
 
 .menu-bar {
   width: 25%;
-  /* border: 2px solid red; */
-  /* background-color: rgb(240, 178, 240); */
-  padding: 20px 40px 0;
+  padding: 20px 0;
+  margin-left: 80px;
 }
 
 .outwear,
@@ -175,7 +157,6 @@ nav > ul > li:hover .dropdown {
 }
 
 .outwear h1,
-.gown-pic-info h1,
 .summary h3 {
   font-size: 26px;
   text-transform: uppercase;
@@ -202,23 +183,13 @@ nav > ul > li:hover .dropdown {
 }
 
 .gown-details {
+  height: 100vh;
   width: 75%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
   padding: 20px;
-  /* background-color: rgb(243, 225, 243); */
   overflow: scroll;
-}
-
-.gown-pic-info {
-  /* border: 2px solid red; */
-  padding: 10px;
-  height: 300px;
-  text-align: center;
-  line-height: 35px;
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(243, 242, 242);
 }
 
 .gown-pic-info img {
@@ -227,10 +198,24 @@ nav > ul > li:hover .dropdown {
   box-shadow: 10px;
 }
 
+.gown-pic-info {
+  height: 300px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(243, 242, 242);
+  overflow: hidden;
+}
+
+.gown-pic-info img:hover {
+  transform: scale(1.1);
+  transition: transform 2s;
+}
+
 .gown-pic-info h1 {
   font-size: 20px;
   color: gray;
-  padding: 0;
+  font-weight: 600;
 }
 
 .gown-pic-info h5 {
@@ -276,4 +261,54 @@ footer > h1 {
   display: flex;
   justify-content: space-around;
   color: rgb(167, 164, 164);
+}
+
+/* ******* MEDIA QUERY ******** */
+@media (max-width: 668px) {
+  /***** header  *****/
+  header {
+    height: 500px;
+  }
+  #header-description h1 {
+    font-size: 28px;
+    color: rgb(7, 201, 201);
+    line-height: 40px;
+    text-align: center;
+  }
+
+  /********* categories  *******/
+  .categories {
+    display: block;
+    margin: 0;
+  }
+  .gown-details {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+  }
+  .outwear p:hover,
+  .summary p:hover {
+    color: rgb(35, 192, 192);
+  }
+  .gown-pic-info img:hover {
+    transform: scale(1.1);
+    transition: transform 2s;
+  }
+
+  /********* footer  ********/
+  footer {
+    height: 430px;
+  }
+  .summaries {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .copyright {
+    display: block;
+  }
+  #reserved,
+  #e-commerce {
+    text-align: center;
+    padding: 5px;
+  }
 }
